@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		68025CA622EFD72400C0E8B4 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68025CA522EFD72400C0E8B4 /* PublicKey.swift */; };
-		68025CA822F046AF00C0E8B4 /* ClearText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68025CA722F046AF00C0E8B4 /* ClearText.swift */; };
-		68025CB022F1E43000C0E8B4 /* PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68025CAF22F1E43000C0E8B4 /* PrivateKey.swift */; };
-		68025CB222F1E4DE00C0E8B4 /* EncryptedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68025CB122F1E4DE00C0E8B4 /* EncryptedText.swift */; };
+		680B65BD22FC630600CF6A8F /* ClearText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B65BC22FC630600CF6A8F /* ClearText.swift */; };
+		680B65BE22FC633100CF6A8F /* SwiftRSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D5C20922EF3A480054BB0D /* SwiftRSA.swift */; };
+		680B65BF22FC633300CF6A8F /* SwiftRSAError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D5C20B22EF461C0054BB0D /* SwiftRSAError.swift */; };
+		680B65C122FC634C00CF6A8F /* EncryptedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B65C022FC634C00CF6A8F /* EncryptedText.swift */; };
+		680B65C222FC637E00CF6A8F /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D5C20722EEFBE60054BB0D /* Key.swift */; };
+		680B65C422FC639300CF6A8F /* PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B65C322FC639300CF6A8F /* PrivateKey.swift */; };
+		680B65C622FC63C000CF6A8F /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680B65C522FC63C000CF6A8F /* PublicKey.swift */; };
 		6862B4CC22FA832100973226 /* EncryptionAndDecryptionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6862B4CB22FA832100973226 /* EncryptionAndDecryptionTests.swift */; };
 		68D5C1DD22EEFB8E0054BB0D /* SwiftRSA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68D5C1D322EEFB8E0054BB0D /* SwiftRSA.framework */; };
 		68D5C1E222EEFB8E0054BB0D /* SwiftRSATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D5C1E122EEFB8E0054BB0D /* SwiftRSATests.swift */; };
@@ -21,9 +24,6 @@
 		68D5C1FB22EEFBB60054BB0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D5C1F922EEFBB60054BB0D /* Main.storyboard */; };
 		68D5C1FD22EEFBB80054BB0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68D5C1FC22EEFBB80054BB0D /* Assets.xcassets */; };
 		68D5C20022EEFBB80054BB0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68D5C1FE22EEFBB80054BB0D /* LaunchScreen.storyboard */; };
-		68D5C20822EEFBE60054BB0D /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D5C20722EEFBE60054BB0D /* Key.swift */; };
-		68D5C20A22EF3A480054BB0D /* SwiftRSA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D5C20922EF3A480054BB0D /* SwiftRSA.swift */; };
-		68D5C20C22EF461C0054BB0D /* SwiftRSAError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68D5C20B22EF461C0054BB0D /* SwiftRSAError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		68025CA522EFD72400C0E8B4 /* PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PublicKey.swift; path = ../../../../../System/Volumes/Data/Users/puretears/Projects/SwiftRSA/SwiftRSA/PublicKey.swift; sourceTree = "<group>"; };
-		68025CA722F046AF00C0E8B4 /* ClearText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClearText.swift; path = ../../../../../System/Volumes/Data/Users/puretears/Projects/SwiftRSA/SwiftRSA/ClearText.swift; sourceTree = "<group>"; };
-		68025CAF22F1E43000C0E8B4 /* PrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrivateKey.swift; path = ../../../../../System/Volumes/Data/Users/puretears/Projects/SwiftRSA/SwiftRSA/PrivateKey.swift; sourceTree = "<group>"; };
-		68025CB122F1E4DE00C0E8B4 /* EncryptedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EncryptedText.swift; path = ../../../../../System/Volumes/Data/Users/puretears/Projects/SwiftRSA/SwiftRSA/EncryptedText.swift; sourceTree = "<group>"; };
+		680B65BC22FC630600CF6A8F /* ClearText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearText.swift; sourceTree = "<group>"; };
+		680B65C022FC634C00CF6A8F /* EncryptedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedText.swift; sourceTree = "<group>"; };
+		680B65C322FC639300CF6A8F /* PrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateKey.swift; sourceTree = "<group>"; };
+		680B65C522FC63C000CF6A8F /* PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicKey.swift; sourceTree = "<group>"; };
 		6862B4CB22FA832100973226 /* EncryptionAndDecryptionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptionAndDecryptionTests.swift; sourceTree = "<group>"; };
 		68D5C1D322EEFB8E0054BB0D /* SwiftRSA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftRSA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68D5C1D622EEFB8E0054BB0D /* SwiftRSA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftRSA.h; sourceTree = "<group>"; };
@@ -125,15 +125,15 @@
 		68D5C1D522EEFB8E0054BB0D /* SwiftRSA */ = {
 			isa = PBXGroup;
 			children = (
-				68025CA722F046AF00C0E8B4 /* ClearText.swift */,
-				68025CB122F1E4DE00C0E8B4 /* EncryptedText.swift */,
 				68D5C1D722EEFB8E0054BB0D /* Info.plist */,
 				68D5C20722EEFBE60054BB0D /* Key.swift */,
-				68025CAF22F1E43000C0E8B4 /* PrivateKey.swift */,
-				68025CA522EFD72400C0E8B4 /* PublicKey.swift */,
 				68D5C1D622EEFB8E0054BB0D /* SwiftRSA.h */,
 				68D5C20922EF3A480054BB0D /* SwiftRSA.swift */,
 				68D5C20B22EF461C0054BB0D /* SwiftRSAError.swift */,
+				680B65BC22FC630600CF6A8F /* ClearText.swift */,
+				680B65C022FC634C00CF6A8F /* EncryptedText.swift */,
+				680B65C322FC639300CF6A8F /* PrivateKey.swift */,
+				680B65C522FC63C000CF6A8F /* PublicKey.swift */,
 			);
 			path = SwiftRSA;
 			sourceTree = "<group>";
@@ -305,13 +305,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68D5C20A22EF3A480054BB0D /* SwiftRSA.swift in Sources */,
-				68025CB222F1E4DE00C0E8B4 /* EncryptedText.swift in Sources */,
-				68D5C20822EEFBE60054BB0D /* Key.swift in Sources */,
-				68025CA822F046AF00C0E8B4 /* ClearText.swift in Sources */,
-				68025CA622EFD72400C0E8B4 /* PublicKey.swift in Sources */,
-				68D5C20C22EF461C0054BB0D /* SwiftRSAError.swift in Sources */,
-				68025CB022F1E43000C0E8B4 /* PrivateKey.swift in Sources */,
+				680B65BD22FC630600CF6A8F /* ClearText.swift in Sources */,
+				680B65C422FC639300CF6A8F /* PrivateKey.swift in Sources */,
+				680B65BE22FC633100CF6A8F /* SwiftRSA.swift in Sources */,
+				680B65BF22FC633300CF6A8F /* SwiftRSAError.swift in Sources */,
+				680B65C622FC63C000CF6A8F /* PublicKey.swift in Sources */,
+				680B65C122FC634C00CF6A8F /* EncryptedText.swift in Sources */,
+				680B65C222FC637E00CF6A8F /* Key.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

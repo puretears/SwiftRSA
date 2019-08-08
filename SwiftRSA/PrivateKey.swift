@@ -34,3 +34,4 @@ public class PrivateKey: Key {
     return SwiftRSA.format(der: data, withPemType: "RSA PRIVATE KEY")
   }
 }
+

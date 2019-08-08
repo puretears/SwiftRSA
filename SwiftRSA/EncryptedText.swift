@@ -27,3 +27,4 @@ public class EncryptedText {
     return ClearText(data: encrypted as Data)
   }
 }
+
