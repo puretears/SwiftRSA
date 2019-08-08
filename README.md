@@ -29,31 +29,7 @@ SwiftRSA is a simple wrapper of Apple Security API which makes RSA encryption an
 
 ### SwiftRSA 101
 
-The simplest use case is using the `default` singleton. Then save and load data as the way of manipulating `UserDefaults`.
 
-Add values to keychain. All these `set` methods return `Bool` to indicate if the data was saved successfully. If the key already exists, the data will be overritten.
-
-```swift
-/// Save data
-SwiftRSA.default.set(1, forKey: "key.int.value")
-SwiftRSA.default.set([1, 2, 3], forKey: "key.array.value")
-SwiftRSA.default.set("string value", forKey: "key.string.value")
-```
-
-Retrieve values from keychain. All kinds of getter methods return `T?`, if the data corresponding to `forKey` cannot decoded back to `T`, it returns `nil`.
-
-```swift
-/// Load data
-SwiftRSA.default.object(of: Int.self, forKey: "key.int.value")
-SwiftRSA.default.object(of: Array.self, forKey: "key.array.value")
-SwiftRSA.default.string(forKey: "key.string.value")
-```
-
-Remove data from keychain. Return `Bool` indicating if the delete was successful.
-
-```swift
-SwiftRSA.default.removeObject(forKey: "key.to.be.deleted")
-```
 
 ## Installation
 
