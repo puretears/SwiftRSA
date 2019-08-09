@@ -20,11 +20,11 @@ public class EncryptedText {
   
   public func decrypted(with key: PrivateKey) throws -> ClearText {
     var error: Unmanaged<CFError>?
-    guard let encrypted = SecKeyCreateDecryptedData(key.key, algo, data as CFData, &error) else {
+    guard let decrypted = SecKeyCreateDecryptedData(key.key, algo, data as CFData, &error) else {
       throw SwiftRSAError.decryptionFailed(error: error?.takeRetainedValue())
     }
     
-    return ClearText(data: encrypted as Data)
+    return ClearText(data: decrypted as Data)
   }
 }
 
