@@ -23,13 +23,78 @@ SwiftRSA is a simple wrapper of Apple Security API which makes RSA encryption an
 ## Features
 
 - [x] Fully tested.
-- [x] Simple interface.
 - [x] Inituitive interface.
 - [x] Updated to Swift 5.
 
-### SwiftRSA 101
+## SwiftRSA 101
 
+### Create a public / private key
 
+#### With a PEM encoded string
+
+```swift
+let pemPrivate = """
+  -----BEGIN RSA PRIVATE KEY-----
+  MIIEowIBAAKCAQEA0HRZppSvYCAFTo+ie5z7EXmzFJ9rSpuUJUAAvikOq/lGVqaK
+  ...
+  2bhAIUk7eWJTorZYujzXO+HmDt+8/ha+RBAtgQPDFPGHG/QaZik8
+  -----END RSA PRIVATE KEY-----
+  """
+let pemPublic = """
+  -----BEGIN PUBLIC KEY-----
+  MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0HRZppSvYCAFTo+ie5z7
+  ...
+  mwIDAQAB
+  -----END PUBLIC KEY-----
+  """
+
+guard let privateKey = PrivateKey(pemEncoded: pem) else {
+  // Invalid pem string
+}
+
+guard let publicKey = PublicKey(pemEncoded: pemPublic) else {
+  // Invalid pem string
+}
+```
+
+#### With a DER encoded string
+
+```swift
+guard let privateKey = PrivateKey(der: data) else {
+  // Invalid DER data
+}
+
+guard let publicKey = PublicKey(der: data) else {
+  // Invalid DER data
+}
+```
+
+### Encrypt with a public key
+
+```swift
+let ct = ClearText(string: "Hello world")
+let encrypted = try ct.encrypted(with: publicKey, by: .rsaEncryptionOAEPSHA512)
+/// `encrypted` is an `EncryptedText` object.
+```
+
+### Decrypt with a private key
+
+```swift
+/// `originText` is a `ClearText` object
+let originText = try encrypted.decrypted(with: privateKey)
+```
+
+### Get data from an `EncryptedText` object
+
+```swift
+let data = encrypted.data
+```
+
+### Get string from a `ClearText` object
+
+```swift
+let string = originText.stringValue
+```
 
 ## Installation
 
@@ -48,7 +113,7 @@ github "puretears/SwiftRSA" ~> 0.1
 
 - Cocoapods and SPM support;
 - More RSA algorithm support;
-- Add X.509 certification support;
+- Add X.509 certificate support;
 - Add sign and verify support;
 
 ## Release History
