@@ -2,10 +2,7 @@ os: osx
 language: swift
 osx_image: xcode11
 env:
-- DESTINATION="OS=13.0,name=iPhone Xs" SCHEME="SwiftRSA" SDK=iphonesimulator CODECOV_TOKEN=e58b9c26-6fc1-4b87-be77-0b6a88f37f3c
-dependencies:
-  pre:
-    - xcrun instruments -w 'iPhone Xs (13.0)' || sleep 15
+- DESTINATION="OS=13.0,name=iPhone 11" SCHEME="SwiftRSA" SDK=iphonesimulator CODECOV_TOKEN=e58b9c26-6fc1-4b87-be77-0b6a88f37f3c
 script:
   xcodebuild -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug test
 after_success:
