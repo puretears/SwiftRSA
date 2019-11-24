@@ -38,3 +38,10 @@ Carthage/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 *.sketch
+
+.DS_Store
+/.build
+/Packages
+/*.xcodeproj
+xcuserdata/
+.swiftpm
